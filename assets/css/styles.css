@@ -27,6 +27,8 @@
   }
 }
 
+
+
 /*===== Margenes =====*/
 :root{
   --mb-1: 0.5rem;
@@ -311,6 +313,9 @@ img{
 }
 .skills__js{
   width: 65%;
+}
+.skills__csharp{
+  width: 70%
 }
 .skills__eng{
   width: 95%;
