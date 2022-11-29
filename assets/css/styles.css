@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 /*===== VARIABLES CSS =====*/
 :root{
-  --header-height: 3rem;
-  --font-semi: 600;
+  --header-height: 2.5rem;
+  --font-semi: 650;
 }
 
 /*===== Colores =====*/
@@ -15,11 +15,11 @@
 /*===== Fuente y tipografia =====*/
 :root{
   --body-font: 'Poppins', sans-serif;
-  --big-font-size: 2rem;
+  --big-font-size: 2.5rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: 922px){
   :root{
     --big-font-size: 3.5rem;
     --h2-font-size: 2rem;
@@ -70,6 +70,7 @@ ul{
 }
 a{
   text-decoration: none;
+  font-size: var(--normal-font-size);
 }
 img{
   max-width: 100%;
@@ -130,7 +131,7 @@ img{
   align-items: center;
   font-weight: var(--font-semi);
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 922px){
   .nav__menu{
     position: fixed;
     top: var(--header-height);
@@ -178,7 +179,7 @@ img{
   height: 0.18rem;
   left: 0;
   top: 2rem;
-  background-color: var(--first-color);
+  /*background-color: var(--first-color); */
 }
 
 /*=== Show menu ===*/
@@ -399,7 +400,7 @@ img{
 }
 
 /* ===== MEDIA QUERIES=====*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 922px){
   body{
     margin: 0;
   }
@@ -425,6 +426,7 @@ img{
   .nav__item{
     margin-left: var(--mb-6);
     margin-bottom: 0;
+    padding-top: 10px;
   }
   .nav__toggle{
     display: none;
@@ -482,5 +484,145 @@ img{
   }
   .home__img{
     right: 10%;
+  }
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  border-radius: 25px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 25px;
+
+  
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #4070F4;
+  color: white;
+  border-radius: 25px;
+  transform: rotateY(180deg);
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
   }
 }
