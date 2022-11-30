@@ -3,7 +3,7 @@
 /*===== VARIABLES CSS =====*/
 :root{
   --header-height: 2.5rem;
-  --font-semi: 650;
+  --font-semi: 655;
 }
 
 /*===== Colores =====*/
@@ -53,7 +53,7 @@
   box-sizing: border-box;
 }
 html{
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 body{
   margin: var(--header-height) 0 0 0;
