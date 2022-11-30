@@ -53,7 +53,7 @@
   box-sizing: border-box;
 }
 html{
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 body{
   margin: var(--header-height) 0 0 0;
