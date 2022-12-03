@@ -9,7 +9,7 @@ ul {
 }
 
 p {
-    color: #444;
+    color: rgb(17, 4, 75);
 }
 
 button:focus {
@@ -51,6 +51,8 @@ button:focus {
 
 #note-textarea {
     margin: 20px 0;
+    background-color: rgb(223, 226, 228);
+
 }
 
 #recording-instructions {
@@ -66,12 +68,16 @@ button:focus {
     padding: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-top: 3px solid #4070F4;
+    border-bottom: 3px solid #4070F4;
+    border-right: 3px solid #4070F4;
+    border-left: 3px solid #4070F4;
+
     border-radius: 10px 10px;
 }
 
 .note .header {
     font-size: 0.9em;
-    color: #888;
+    color: rgb(40, 91, 119);
     margin-bottom: 10px;
 }
 
