@@ -1,2 +1,2 @@
-# [portfolio](https://aryangulati.github.io)
+# [Portfolio](https://aryangulati.github.io)
  
